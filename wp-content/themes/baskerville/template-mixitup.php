@@ -24,6 +24,7 @@ Template Name: MixItUp template
 
                 <!-- Iterate through each category -->
 
+                <a href="#!" id="show-all" style="float: right;">Show all</a>
                 <?php foreach($all_categories as $category): ?>
                     <!-- Output control button markup, setting the data-filter attribute as the category "slug" -->
 
@@ -71,5 +72,9 @@ Template Name: MixItUp template
 
     <script>
         var mixer = mixitup('.container');
+
+        jQuery("#show-all").on("click", function () {
+            mixer.show();
+        });
     </script>
 <?php get_footer(); ?>

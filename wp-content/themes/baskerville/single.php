@@ -119,29 +119,9 @@
 							</div><!-- .featured-media -->
 						
 						<?php endif; ?>
-				
-					<?php elseif ( has_post_thumbnail() ) : ?>
-					
-						<div class="featured-media">
-						
-							<?php 
-								
-							the_post_thumbnail( 'post-image' );
 
-							$image_caption = get_post( get_post_thumbnail_id() )->post_excerpt;
-							
-							if ( $image_caption ) : ?>
-											
-								<div class="media-caption-container">
-								
-									<p class="media-caption"><?php echo $image_caption; ?></p>
-									
-								</div>
-								
-							<?php endif; ?>
-									
-						</div><!-- .featured-media -->
-					
+					<?php elseif ( has_post_thumbnail() ) : ?>
+
 					<?php endif; ?>
 														                                    	    
 					<div class="post-content">
